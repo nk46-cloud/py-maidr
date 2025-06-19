@@ -69,7 +69,7 @@ version_variables = ["maidr/__init__.py:__version__"]
 version_toml = ["pyproject.toml:tool.poetry.version"]
 
 [tool.semantic_release.branches.main]
-match = "(main|master)"
+match = ".*"
 prerelease_token = "rc"
 prerelease = false
 
