@@ -29,18 +29,11 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - name: Show debug info
-        run: |
-          echo "Current branch: ${{ github.ref_name }}"
-          echo "Git status:"
-          git status
-          echo "Available tags:"
-          git tag -l
-          echo "Semantic-release version:"
-          poetry run semantic-release --version
+      - name: Show python-semantic-release version
+        run: poetry run semantic-release --version
 
       - name: Semantic Release (update changelog and version)
-        uses: python-semantic-release/publish-action@main
+        uses: python-semantic-release/publish-action@v10.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           args: "--verbosity=DEBUG"
