@@ -57,3 +57,6 @@ class BarPlot(MaidrPlot, ContainerExtractorMixin, LevelExtractorMixin, DictMerge
         self._elements.extend(plot)
 
         return [float(patch.get_height()) for patch in plot]
+
+
+pass
