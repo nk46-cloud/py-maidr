@@ -82,6 +82,7 @@ prerelease = false
 [tool.semantic_release.changelog]
 changelog_mode = "update"
 exclude_commit_patterns = []
+include_changelog_file_in_release = true
 
 [tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.md"
