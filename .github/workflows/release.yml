@@ -3,7 +3,7 @@ name: Semantic Release
 on:
   push:
     branches:
-      - '**'        # Run on all branches
+      - '**'        # Run on all branches for testing
   workflow_dispatch:
 
 permissions:
@@ -29,8 +29,15 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - name: Show python-semantic-release version
-        run: poetry run semantic-release --version
+      - name: Show debug info
+        run: |
+          echo "Current branch: ${{ github.ref_name }}"
+          echo "Git status:"
+          git status
+          echo "Available tags:"
+          git tag -l
+          echo "Semantic-release version:"
+          poetry run semantic-release --version
 
       - name: Semantic Release (update changelog and version)
         uses: python-semantic-release/publish-action@main

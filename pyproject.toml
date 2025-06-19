@@ -69,9 +69,14 @@ version_variables = ["maidr/__init__.py:__version__"]
 version_toml = ["pyproject.toml:tool.poetry.version"]
 
 [tool.semantic_release.branches.main]
-match = ".*"
+match = "main"
 prerelease_token = "rc"
 prerelease = false
+
+[tool.semantic_release.branches.dev]
+match = ".*"
+prerelease = true
+prerelease_token = "dev"
 
 [tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.md"
@@ -79,9 +84,7 @@ exclude_commit_patterns = [
   "^(?!feat: |feat\\(.*\\): |fix: |fix\\(.*\\): |docs: |docs\\(.*\\): |perf: |perf\\(.*\\): |refactor: |refactor\\(.*\\): |test: |test\\(.*\\): |build: |build\\(.*\\): |chore: |chore\\(.*\\): |ci: |ci\\(.*\\): |style: |style\\(.*\\): ).*"
 ]
 
-
 [tool.semantic_release.commit_author]
-env = "GIT_COMMIT_AUTHOR"
 default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.commit_parser_options]
@@ -99,3 +102,4 @@ env = "GH_TOKEN"
 
 [tool.semantic_release.publish]
 upload_to_vcs_release = false
+dist_glob_patterns = []
