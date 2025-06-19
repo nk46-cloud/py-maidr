@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "maidr"
-version = "1.0.0"
+version = "2.0.0-rc.1"
 description = "Multimodal Access and Interactive Data Representations"
 authors = [
     "JooYoung Seo <jseo1005@illinois.edu>",
@@ -103,13 +103,6 @@ autoescape = true
 [tool.semantic_release.commit_author]
 env = "GIT_COMMIT_AUTHOR"
 default = "semantic-release <semantic-release>"
-
-[tool.semantic_release.commit_parser_options]
-allowed_tags = ["feat", "fix", "docs", "perf", "refactor", "style", "test", "build", "chore", "ci"]
-minor_tags = ["feat"]
-patch_tags = ["fix", "perf"]
-parse_squash_commits = true
-ignore_merge_commits = true
 
 [tool.semantic_release.remote]
 name = "origin"
