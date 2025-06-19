@@ -68,6 +68,7 @@ allow_zero_version = true
 tag_format = "v{version}"
 version_variables = ["maidr/__init__.py:__version__"]
 version_toml = ["pyproject.toml:tool.poetry.version"]
+commit_author = "semantic-release <semantic-release>"
 
 [tool.semantic_release.branches."fix/stest"]
 match = "fix/stest"
@@ -83,6 +84,7 @@ prerelease = false
 changelog_mode = "update"
 exclude_commit_patterns = []
 include_changelog_file_in_release = true
+commit_changelog = true
 
 [tool.semantic_release.changelog.default_templates]
 changelog_file = "CHANGELOG.md"
@@ -100,10 +102,6 @@ newline_sequence = "\n"
 keep_trailing_newline = false
 extensions = []
 autoescape = true
-
-[tool.semantic_release.commit_author]
-env = "GIT_COMMIT_AUTHOR"
-default = "semantic-release <semantic-release>"
 
 [tool.semantic_release.remote]
 name = "origin"
