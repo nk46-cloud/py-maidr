@@ -80,11 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: push
     needs: [test, lint, commit-lint]
-    environment:
-      name: pypi
-      url: https://pypi.org/project/maidr/
     permissions:
-      # https://docs.github.com/en/rest/overview/permissions-required-for-github-apps?apiVersion=2022-11-28#metadata
       id-token: write
       contents: write
 
