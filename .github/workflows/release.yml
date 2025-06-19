@@ -33,7 +33,7 @@ jobs:
         run: poetry run semantic-release --version
 
       - name: Semantic Release (update changelog and version)
-        uses: python-semantic-release/publish-action@v2.0.0
+        uses: python-semantic-release/publish-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           args: "--verbosity=DEBUG"
