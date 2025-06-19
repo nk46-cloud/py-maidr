@@ -1,4 +1,4 @@
-__version__ = "1.0.0-rc.5"
+__version__ = "2.0.0-rc.2"
 
 from .api import close, render, save_html, show, stacked
 from .core import Maidr
