@@ -79,9 +79,11 @@ match = "(main|master)"
 prerelease_token = "rc"
 prerelease = false
 
-[tool.semantic_release.changelog.default_templates]
-template_dir = "templates"
+[tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
+changelog_mode = "update"
+
+[tool.semantic_release.changelog.exclude_commit_patterns]
 exclude_commit_patterns = [
   "^(?!feat: |feat\\(.*\\): |fix: |fix\\(.*\\): |docs: |docs\\(.*\\): |perf: |perf\\(.*\\): |refactor: |refactor\\(.*\\): |test: |test\\(.*\\): |build: |build\\(.*\\): |chore: |chore\\(.*\\): |ci: |ci\\(.*\\): |style: |style\\(.*\\): ).*"
 ]
@@ -108,6 +110,8 @@ default = "semantic-release <semantic-release>"
 allowed_tags = ["feat", "fix", "docs", "perf", "refactor", "style", "test", "build", "chore", "ci"]
 minor_tags = ["feat"]
 patch_tags = ["fix", "perf"]
+parse_squash_commits = true
+ignore_merge_commits = true
 
 [tool.semantic_release.remote]
 name = "origin"
