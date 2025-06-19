@@ -92,13 +92,16 @@ jobs:
 
       - name: Python Semantic Release
         id: release
-        uses: python-semantic-release/python-semantic-release@master
+        uses: python-semantic-release/python-semantic-release@v10.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           verbosity: 3
           changelog: true
           commit: true
           push: true
+          directory: .
+          no_operation_mode: false
+          strict: false
 
 
       # # see https://docs.pypi.org/trusted-publishers/
