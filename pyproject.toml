@@ -82,9 +82,7 @@ prerelease = false
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
 changelog_mode = "update"
-exclude_commit_patterns = [
-    "^(?!feat: |feat\\(.*\\): |fix: |fix\\(.*\\): |docs: |docs\\(.*\\): |perf: |perf\\(.*\\): |refactor: |refactor\\(.*\\): |test: |test\\(.*\\): |build: |build\\(.*\\): |chore: |chore\\(.*\\): |ci: |ci\\(.*\\): |style: |style\\(.*\\): ).*"
-]
+exclude_commit_patterns = []
 
 [tool.semantic_release.changelog.environment]
 block_start_string = "{%"
