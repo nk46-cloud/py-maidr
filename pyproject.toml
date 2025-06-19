@@ -84,9 +84,6 @@ exclude_commit_patterns = [
   "^(?!feat: |feat\\(.*\\): |fix: |fix\\(.*\\): |docs: |docs\\(.*\\): |perf: |perf\\(.*\\): |refactor: |refactor\\(.*\\): |test: |test\\(.*\\): |build: |build\\(.*\\): |chore: |chore\\(.*\\): |ci: |ci\\(.*\\): |style: |style\\(.*\\): ).*"
 ]
 
-[tool.semantic_release.commit_author]
-default = "semantic-release <semantic-release>"
-
 [tool.semantic_release.commit_parser_options]
 allowed_tags = ["feat", "fix", "docs", "perf", "refactor", "style", "test", "build", "chore", "ci"]
 minor_tags = ["feat"]
