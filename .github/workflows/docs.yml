@@ -34,6 +34,8 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Run quartodoc
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           cd docs
           uvx quartodoc build --verbose
