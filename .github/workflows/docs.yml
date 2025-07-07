@@ -38,8 +38,8 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}
         run: |
           cd docs
-          uvx --python="../.venv/bin/python" quartodoc build --verbose
-          uvx --python="../.venv/bin/python" quartodoc interlinks
+          uv run quartodoc build --verbose
+          uv run quartodoc interlinks
 
       - name: Check if docs were built successfully
         run: |
