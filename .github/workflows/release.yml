@@ -107,5 +107,8 @@ jobs:
         # See https://github.com/actions/runner/issues/1173
         if: steps.release.outputs.released == 'true'
         run: |
+          rm -rf .venv
+          uv venv
+          uv sync
           uv build
           echo "Package built successfully in dist/ directory"
