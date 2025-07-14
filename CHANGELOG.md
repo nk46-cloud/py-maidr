@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.1 (2025-07-14)
+
+### Bug Fixes
+
+- Address build
+  ([`63b93a0`](https://github.com/nk46-cloud/py-maidr/commit/63b93a04b5811ef583c369d095a6819be795bfa5))
+
+
 ## v0.1.0 (2025-07-14)
 
 ### Bug Fixes
